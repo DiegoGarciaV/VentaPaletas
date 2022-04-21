@@ -107,10 +107,10 @@ body
     /*box-shadow:                 0px 10px 20px 5px var(--pColor_04);*/
 }
 
-
 .catalogo .row .col p.precio
 {
-    color:                      var(--pColor_05);
+    color:                      var(--pColor_02);
+    font-weight: 600;
 }
 
 .catalogo .row .col p
@@ -129,13 +129,4 @@ body
     {
         font-size:                  24px;
     }
-}
-
-.prodData
-{
-    background-color:           var(--pColor_04);
-    color:                      #fff;
-    border-bottom-left-radius:  10px;
-    border-bottom-right-radius: 10px;
-    padding:                    10px 0 0px 0;
 }
