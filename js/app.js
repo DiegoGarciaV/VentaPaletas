@@ -13,8 +13,7 @@ app.controller("controlador",function($scope){
                     success: function(result){
               
                             paletas.catalogo = result;
-                            alert(paletas.catalogo);
-                            $apply();
+                            paletas.$apply();
                     }
                 });
     };
