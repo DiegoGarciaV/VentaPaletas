@@ -9,9 +9,9 @@ CREATE VIEW     detalleProductos                  AS
                 C.cantidad                          as stock,
                 C.imagen                            AS imagen
 
-    FROM        CATALOGO                            AS C
+    FROM        catalogo                            AS C
                 INNER JOIN  
-                FORMATOS                            AS F
+                formatos                            AS F
 
     ON          C.formato       = F.idFormato;
 
@@ -29,17 +29,17 @@ CREATE VIEW     detalleMovimientos                  AS
                 M.pCompra                           AS compra,
                 M.cantidad                          AS cantidad
 
-    FROM        MOVIMIENTOS                         AS M
+    FROM        movimientos                         AS M
                 INNER JOIN 
-                CATALOGO                            AS C
+                catalogo                            AS C
 
     ON          M.idPaleta      = C.id
                 INNER JOIN  
-                FORMATOS                            AS F
+                formatos                            AS F
 
     ON          C.formato       = F.idFormato
                 INNER JOIN
-                DPTOS                               AS D
+                dptos                               AS D
 
     ON          M.idDepto       = D.idDepto;
 
@@ -59,7 +59,7 @@ BEGIN
 
         FROM        detalleProductos                    AS C
                     INNER JOIN
-                    DPTOS                               AS D
+                    dptos                               AS D
 
         ON          C.sabor             = varSabor
         AND         C.form              = varFormato
