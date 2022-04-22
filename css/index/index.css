@@ -30,7 +30,7 @@ body
     margin:                     0;
     background-color:           var(--pColor_04);
     background-image:           url('C:/Users/diego/Documents/Proyectos/VentaPaletas/VentaPaletas/img/portada1.jpg');
-    /*background-image:           url('/img/portada1.jpg');*/
+    background-image:           url('img/portada1.jpg');
     background-repeat:          no-repeat;
     background-size:            cover;
 }
