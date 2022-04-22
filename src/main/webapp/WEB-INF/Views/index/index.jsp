@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="es" ng-app="PaletasApp">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
@@ -14,8 +14,10 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
         <script type="text/javascript" src="js/angular.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+
     </head>
-    <body onload="onloadBody()">
+    <body onload="onloadBody()" ng-controller="controlador">
         <header>
             
         </header>
@@ -96,7 +98,30 @@
                         
                     </div>
 
+                    
+
         </div>
+
+        <div class="fullContent" id="catalogo2">
+
+            <h1>
+               Nuestros productos 
+            </h1>
+
+            <div class="container catalogo" >
+                <div class="row justify-content-around">
+                    <div ng-repeat="producto in catalogo" class="col col-lg-3 col-md-4 col-6">
+                        <img src="img/catalogo/PinaMD.png">
+                        <div class="prodData">
+                            <h2>{{producto.sabor}}</h2>
+                            <p>{{producto.formato}} (100gr)</p>
+                            <p class="precio">{{ "$" + producto.venta}} MXN</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
 
     </body>
 </html>

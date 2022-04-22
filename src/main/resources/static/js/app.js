@@ -9,7 +9,7 @@ app.controller("controlador",function($scope){
     paletas.getProductos = function(){
 
         $.ajax({
-                    url: "http://localhost:8080/api/productos", 
+                    url: "api/productos", 
                     success: function(result){
               
                             paletas.catalogo = result;
